@@ -5,14 +5,15 @@ import matplotlib.pyplot as plt
 
 # Exercițiul 1: Vizualizarea distribuțiilor
 
-lambda_clienti = 20  # Parametrul distribuției Poisson (clienți pe oră)
-media_plata = 2  # Media distribuției normale pentru timpul de plată (minute)
-deviatie_standard_plata = 0.5  # Deviația standard a distribuției normale pentru timpul de plată (minute)
-media_pregatire = 3  # Media distribuției exponențiale pentru timpul de pregătire (minute)
+lambda_clienti = 20  
+media_plata = 2  
+deviatie_standard_plata = 0.5 
+media_pregatire = 3  
 
 numar_clienti = np.random.poisson(lambda_clienti, 1000)
 timp_plata = np.random.normal(media_plata, deviatie_standard_plata, 1000)
 timp_pregatire = np.random.exponential(media_pregatire, 1000)
+timp_total = timp_plata + timp_pregatire
 
 # Exercițiul 2: Calcularea timpului mediu de așteptare
 
